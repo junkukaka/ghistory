@@ -7,8 +7,3 @@
 *.iml
 out
 gen
-src/main/java/com/his/
-src/main/java/com/news/
-src/test/
-target/generated-sources/
-target/generated-test-sources/
