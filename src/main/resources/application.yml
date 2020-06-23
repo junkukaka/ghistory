@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      database: mycol   #数据库名
+      port: 27017
+
+server:
+  port: 8090
