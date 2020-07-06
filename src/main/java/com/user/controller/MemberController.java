@@ -19,9 +19,19 @@ public class MemberController {
      * @param member
      * @return
      */
-    @RequestMapping(value = "/members",method = RequestMethod.POST)
+    @RequestMapping(value = "/members/register",method = RequestMethod.POST)
     public @ResponseBody Member register(@RequestBody Member member){
         return memberService.register(member);
+    }
+
+    /**
+     * member login
+     * @param member
+     * @return
+     */
+    @RequestMapping(value = "/members/login",method = RequestMethod.POST)
+    public @ResponseBody Member login(@RequestBody Member member){
+       return memberService.login(member);
     }
 
     /**
@@ -30,7 +40,7 @@ public class MemberController {
      * @return
      */
     @RequestMapping(value = "/members/mail/{mail}",method = RequestMethod.GET)
-    public @ResponseBody Member getMail(@PathVariable String mail){
+    public String getMail(@PathVariable String mail){
         return memberService.getMail(mail);
     }
 
@@ -40,7 +50,7 @@ public class MemberController {
      * @return
      */
     @RequestMapping(value = "/members/alias/{alias}",method = RequestMethod.GET)
-    public @ResponseBody Member getAlias(@PathVariable String alias){
+    public String getAlias(@PathVariable String alias){
         return memberService.getAlias(alias);
     }
 }
