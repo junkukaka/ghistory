@@ -14,3 +14,4 @@ public interface GCodeRepository extends MongoRepository<GCode,String> {
     List<GCode> findByTy(String ty);
     GCode findByTyAndCode(String ty,String code);
 }
+

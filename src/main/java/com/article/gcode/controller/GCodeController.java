@@ -55,10 +55,12 @@ public class GCodeController {
     }
 
     /**
-     * 删除
-     * @param id
-     * @return
-     */
+     * @Author nanguangjun
+     * @Description //TODO
+     * @Date 오후 6:32 2020-07-16
+     * @Param [id]
+     * @return int
+     **/
     @RequestMapping(value = "/codes/delete/{id}",method = RequestMethod.DELETE)
     public int deleteById(@PathVariable String id){
         //成功

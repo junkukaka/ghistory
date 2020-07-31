@@ -3,6 +3,8 @@ package com.article.gcode.service;
 import com.article.gcode.repository.GCodeRepository;
 import com.entry.GCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -54,7 +56,8 @@ public class GCodeService {
      * @return
      */
     public List<GCode> findAll(){
-        return gCodeRepository.findAll();
+        Sort sort = Sort.by(new Sort.Order(Sort.Direction.ASC, "ty"),new Sort.Order(Sort.Direction.ASC,"code"));
+        return gCodeRepository.findAll(sort);
     }
 
 
